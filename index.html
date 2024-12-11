@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:100%;
+            height: 80px;
+            background-color: #207bbc;
+            color: white;
+        }
+        th{
+            color: white;
+            cursor: pointer;
+        }
+        th:hover{
+            color: #afd6f2;
+        }
+        .mdiv{
+            height: 400px;
+            width: 90%;
+            display: flex;
+            flex-direction:row;
+            justify-content:space-around;
+        }
+        
+        
+        hr{
+            width: 100%;
+            height: 20px;
+            background-color: #207bbc;
+        }
+        
+        .p1{
+            width: 300px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 50px;
+            text-align: center;
+            justify-content: center;
+            padding-top: 5px;
+            font-size: medium;
+    
+            
+        }
+        .p1:hover{
+            background-color: black;
+            color:white;
+            cursor: pointer;
+        }
+        button{
+            width: 500px;
+            height: 40px;
+            border: 1px solid #207bbc;
+            border-radius: 50px;
+            text-align: center;
+            align-items: center;
+            
+            color: #207bbc;
+            margin-top: 20px;
+
+        }
+        button:hover{
+            background-color: #207bbc;
+            color:white;
+            cursor: pointer;
+        }
+        .b2{
+            margin-left: 550px;
+
+        }
+       
+        .p{
+            font-size: larger;
+            text-align: justify;
+            width: 800px;
+            margin-left: 400px;
+        }
+        .div3{
+            width: 100%;
+            height: 400px;
+            background:#207bbc;
+            padding-top: 200px;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        
+        .div4{
+            margin-left: 100px;
+            text-align: center;
+            align-items: center;
+            
+        }
+        p{
+            text-align: center;
+        }
+        .div5{
+            width: 800px;
+            margin-left: 300px;
+            font-size: x-large;
+            text-align: justify;
+            
+        }
+        .h4{
+            text-transform: uppercase;
+            font-size: larger;
+
+            
+        }
+        h1{
+            text-transform: uppercase;
+            font-size: xx-large;
+            text-align: center;
+            text-decoration: underline solid 0.5px gray;
+            text-underline-offset: 5px;
+        }
+        .div6{
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            gap:100px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+           
+        }
+        .div7{
+            width: 700px;
+            height: 400px;
+            font-size: x-large;
+            margin-top: 80px; 
+        }
+        .span1{
+            text-align: center;
+            text-decoration: underline solid 0.5px gray;
+            text-underline-offset: 5px;
+        }
+        .pic1{
+            width: 450px;
+            height: 450px;
+            object-fit:contain;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       .div8{
+        font-size: x-large;
+        text-transform: uppercase;
+        width: 80%;
+        margin-left: 150px;
+       }
+       .span2{
+        font-size: xx-large;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+       }
+       iframe{
+        width: 80%;
+        align-items: center;
+        margin-left: 180px;
+       }
+       .div9{
+        text-transform: uppercase;
+        font-size: x-large;
+        text-align: center;
+       }
+       .b1{
+        
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+       
+        
+       }
+       .b3 {
+        width: 150px;  
+        height: 100px;  
+        border-radius: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: white;  
+        cursor: pointer;
+        transition: background-color 0.3s;
+       }
+       .b3.hover{
+       background-color: #207bbc;
+       }
+       footer{
+        background-color:#207bbc ;
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        padding-top: 200px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: large;
+       }
+       .f2{
+        text-transform: uppercase;
+       }
+       footer a{
+       padding: 5px;
+        transition: 0.3S;
+       }
+       footer a:hover{
+        color:rgb(98, 96, 96);
+        cursor:pointer;
+       }
+       .img1 {
+        position: relative;
+    }
+    
+    .t1 {
+        position: absolute;
+        top: 80%;  
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        font-size: 35px; 
+        color: white; 
+        font-weight: bold;
+        text-align: center;
+       
+    }
+    .t2{
+        position: absolute;
+        top: 20%;  
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        font-size: 35px; 
+        color: white; 
+        font-weight: bold;
+        text-align: center;
+
+    }
+    
+       
+      
+    </style>
+</head>
+<body>
+    <header>
+        <table >
+            <tr>
+                <th><img src="./images/—Pngtree—vector book icon_4276071.png" width="50px" height="50px"> </th>
+                <th>HOME</th>
+                <th>KID STORIES</th>
+                <th>ABOUT</th>
+                <th>CONTACTS</th>
+               <th><img src="./images/[CITYPNG.COM]HD White Youtube YT Logo Symbol Icon PNG - 2000x2000.png" width="50px" >
+                <img src="./images/—Pngtree—white icon_3570420.png" width="50px" ></th>
+            </tr>
+        </table>
+        <div class="img1"><div class="t1">FREE & ORIGINAL STORIES FOR KIDS!</div>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1611416261976-5MBLFY77VFAMH1RFMFZ2/Rosaline%2527s%2BHut%2BBackground-min.jpg?format=2500w" alt="img" width="100%" height="500px"/>
+        
+    </div>
+    </header>
+    <section>
+        <div class="mdiv">
+            <div class="div1">
+                <h1>BROWSE STORIES BY AGE</h1>
+                <p class="p1">FOR KIDS AGES 3-5</p>
+                <p class="p1">FOR KIDS AGES 5-8</p>
+                <p class="p1">FOR KIDS AGES 8-10</p>
+                <p class="p1">FOR KIDS AGES 10+</p>
+                <p class="p1">MIDDLE GRADE NOVELS</p>
+            </div>
+            <div class="div2">
+                <h1>BROWSE STORIES BY STYLE</h1>
+                <p class="p1">RHYMING STORIES FOR KIDS</p>
+                <p class="p1">NON-RHYMING STORIES FOR KIDS</p>
+                <p class="p1">BEDTIME STORIES FOR KIDS</p>
+                <p> <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/bb41255c-1540-44f1-8c72-111c49415ab1/Gnarble+Smaller.png?format=1000w" alt="img" width="200px" height="200px"/></p>
+            </div>
+        </div>
+        <br>
+        <br>
+
+       
+        <div class="b2"><button type="button" name="button">SUBSCRIBE TO OUR YOUTUBE CHANNEL</button></div>
+    
+        <div class="div3">
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1611416766105-1PFVKVQWHHDNBTV1YLZT/Candy%2BHouse%2BBackground-min.jpg?format=2500w" alt="img" width="100%" height="400px"/>
+    <div class="t2">ALWAYS FREE. NO SIGN-UP.<br> NO DOWNLOADS.</div>
+    </div>
+    <div class="div4">
+        <h4 class="h4">NEW STORY!</h4>
+        <h1>I DON'T WANT A HAIRCUT</h1>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/6dfb99ac-f68c-4cbe-886b-309659513230/Idontwantahaircutcover+thumbnail.jpg?format=1500w" ait="img" width="50%" height="500px"/>
+        <div class="div5">Sammy and haircuts did not get along. In fact, he decided one day that he would never get another haircut again. But, soon Sammy realized that avoiding the barber, and letting your hair get longer, and longer, and longer… wasn’t all it’s cracked up to be. Turns out, when you can’t see what you’re eating, you might end up eating napkins instead of pancakes! And nobody wants to find potato chips in their hair! This illustrated story for kids is a fun lesson for anyone who doesn’t like haircuts!</div>
+    </div>
+    <div class="div4">
+        <h4 class="h4">Story of the Month: DECEMBER</h4>
+        <h1>The Guardians of Lore</h1>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/8fe94006-7a27-4124-a4b5-87e757240b68/GuardianCoverFullOpt+copy.jpeg?format=1500w" ait="img" width="50%" height="500px"/>
+        <div class="div5">While drawing in class at Stagwood School, 12-year old Cal sees a frog staring at him through the window. Stranger than that, is the fact that this frog happens to be wearing glasses. 
+
+           <p> Cal and his best friend, Soy, learn that the frog (who prefers the name Deli) has sought them out for a reason. When a school administrator named Ream reveals himself to be a dragon, the boys discover that fairytales are real, and that there is magic afoot in Stagwood. With Ream on their tail, the trio must unearth a powerful tool protected by riddles and rile (the magic that fuels nightmares) to save the fate of all fairytales past. But, before Cal can defeat Ream, he has to deal with Soy's knack for arguing with magical creatures, discover the truth about Deli's identity, and earn his place as the hero of the story. The Guardians of Lore is a middle grade novel that centers around two life-long friends, infusing humor and fantasy-based riddles into a modern fairytale.</p>
+            
+            
+            
+            <p>One of our most-read and fun stories of all time!</p>
+            
+            </div>
+    </div>
+    
+   <div class="b2"><button type="button" name="button">LISTEN ON YOUTUBE</button></div>
+    <div class="p"><p>While drawing in class at Stagwood School, 12-year old Cal sees a frog staring at him through the window. Stranger than that, is the fact that this frog happens to be wearing glasses. </p>
+
+        <p>Cal and his best friend, Soy, learn that the frog (who prefers the name Deli) has sought them out for a reason. When a school administrator named Ream reveals himself to be a dragon, the boys discover that fairytales are real, and that there is magic afoot in Stagwood. With Ream on their tail, the trio must unearth a powerful tool protected by riddles and rile (the magic that fuels nightmares) to save the fate of all fairytales past. But, before Cal can defeat Ream, he has to deal with Soy's knack for arguing with magical creatures, discover the truth about Deli's identity, and earn his place as the hero of the story. The Guardians of Lore is a middle grade novel that centers around two life-long friends, infusing humor and fantasy-based riddles into a modern fairytale.</p>
+        
+        
+        
+        <p>One of our most-read and fun stories of all time!</p></div>
+        <hr>
+    <div class="div4">
+        <h4 class="h4">Popular STORIES FOR KIDS</h4>
+        <p>Check out some of our most popular free kids stories online. Fun stories that have been read by kids, parents, teachers, and guardians all over the world! </p>
+        <h1>When do hippos play?</h1>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/f1ac3e76-fca2-4a23-820f-6fa73450a933/When+Do+Hippos+Play+Cover+Thumbnail+Opt.jpeg?format=1000w" ait="img" width="50%" height="500px"/>
+        <div class="div5">Do you know what the Hippos of Africa do long after the Elephants and Rhinos have gone to sleep? This rhythmical story will teach kids about the habits of Hippos at night. Full of true facts and fun rhymes, kids stories don’t get more fun than this! </div>
+    </div>
+    <div class="div4">
+        
+        <h1>How Firefly got his Light</h1>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/ca141b59-c29f-4a89-96d3-825b6a6d4d11/Firefly+Cover+4+Opt.jpeg?format=1000w" ait="img" width="50%" height="500px"/>
+        <div class="div5">Long ago, Sun and Moon shared the sky together, and there was no day and night. When Elephant, Turtle, and Owl, asked them to split the day into light and dark, they called on a very special fly to help signal them when it was time to leave the sky. This modern-day fable is one of our origin stories for kids who want to learn about the best and brightest of bugs: the firefly!
+
+
+
+            <p>Did You Know: fireflies (sometimes called lightning bugs) are most active at dawn and dusk.</p></div>
+    </div>
+    <div class="div4">
+        
+        <h1>WHy the cricket chirps</h1>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/ae5b33ab-b17f-4785-a82b-eceef31db21b/Cricket+Cover+Opt.jpeg?format=1000w" ait="img" width="50%" height="500px"/>
+        <div class="div5">How you ever wondered why crickets have wings, but they don't fly? This fun and beloved fable explores the journey of the cricket, and reveals the secret message it’s sending to us. Why the Cricket Chirps is a popular classroom and bedtime story for kids.
+
+            <p>Did You Know: Dolbear's Law states that you can tell the temperature outside by the rate at which a cricket chirps.  The higher the temperature, the faster the chirps!</p></div>
+    </div>
+    <div class="div4">
+        
+        <h1>Gemma</h1>
+        <img src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1c75d66f-e627-4727-8032-71aed20bfea2/Gemma+Cover+Thumbnail+with+Title+Opt.jpeg?format=1000w" ait="img" width="50%" height="500px"/>
+        <div class="div5">Gemma is a middle grade novel that follows a curious explorer and her ring-tailed lemur, Milo, as they hunt for the “most greatest treasure in the world”. Solving riddles, battling a bell-wearing jaguar, and traveling the Eight Seas, Gemma’s adventures take her from a young girl to a brave captain, whose only limits are the stars. One of our more advanced stories for kids, Gemma is a perfect book for reading chapter-by-chapter together.</div>
+    </div>
+    
+    <div class="div6">
+        
+        
+        <div class="pic1"><img  src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1542163705439-0FJZPVS9U2QLN48PWQP0/Robot+Bedtime+Book-min.jpeg?format=500w" ait="img" /></div>
+        <div class="div7">
+            <span class="span1" ><h1>The Robot Bedtime Book</h1></span>
+            <p>Ages 3-5, Narrated, Read Along
+
+            One of our most popular bedtime stories, this is the tale of a group of robots winding down for the night. The Robot Bedtime Book is a playful bedtime story for kids that encourages interaction, imagination, and a fun bedtime routine.</p></div>
+    </div>
+    <div class="div6">
+       
+        <div class="pic1"><img  src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1575530550257-UP92OP28U2BY7JIAJSSR/G2-min.jpeg?format=500w" ait="img" /></div>
+        
+        <div class="div7">
+           <span class="span1" ><h1>THE JOURNEY OF THE NOBLE GNARBLE</h1></span>
+            <p>The Journey of the Noble Gnarble is a number one best-selling ebook that has been adapted into a hardcover book and play. Through rhyming verse and engaging illustrations, the Noble Gnarble teaches kids about perseverance and determination in the face of obstacles. Dream Big!</p></div>
+    </div>
+    <div class="div6">
+       
+        <div class="pic1"><img  src="https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1542151201932-1CUEO397Y03QBOO7HQMG/Gnarble%27s+World+Smaller-min.jpeg?format=500w" ait="img" /></div>
+        <div class="div7">
+            <span class="span1" > <h1>GNARBLE'S WORLD </h1></span>
+            <p>Ages 3-8, Narrated, Read Along
+
+            Explore the ocean floor and discover the location of Orangebeard's Treasure in this series of adventure stories for kids! Each location that you visit under the sea reveals a unique story from the gnarble. Piece together the clues with reading comprehension and reasoning skills to solve the mystery!</p></div>
+    </div>
+    <div class="div8"><p>our children’s stories Are translated into 35 different languages, from Hindi (बच्चों की रात की कहानियां) to English! Select your Language in the bottom right corner.</p></div>
+    <div class="b2"><button type="button" name="button">CLICK HERE TO VIEW LANGUAGES LIST</button></div>
+
+    <span class="span2"><p>Stories for Kids YOUTUBE Playlist</p></span>
+    <iframe width="1327" height="750" src="https://www.youtube.com/embed/g4krt3oDnGg?list=PLfOrzdWVYvEdYUHrMikvi6d7C7wllgYZp" title="When Do Hippos Play? | Rhyming Bedtime Story for Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls></iframe>
+    <div class="div9"><p>Check out our Youtube Channel for new illustrated and narrated kids stories added regularly.</p></div>
+    <div class="div9"><p>FREECHILDRENSTORIES.COM PROVIDES BEST-SELLING Short STORIES FOR KIDS OF ALL AGES FOR FREE. READ MORE ABOUT US HERE!</p></div>
+    <div class="div9"><p>Follow Us for New ONLINE Stories For Kids</p></div>
+   <div class="b1">
+    <div class="b3"><button type="button" name="button">YOUTUBE</button></div>
+    <div class="b3"><button type="button" name="button">FACEBOOK</button></div>
+</section>
+    <footer>
+        <div class="f1"><p>Copyright © 2020-2024, Freestories.com, Daniel Errico, Soaring Ship, LCC. All Rights Reserved.</p></div>
+        <div class="f2"><p>                                        
+        <a>Bedtime Stories</a>
+        <a>Stories For Kids Age 3-5 </a>
+        <a>Stories For Kids Age 5-8 </a>
+        <a>Stories For Kids Age 8-10 </a>
+        <a> Stories For Kids Age 10+</a>
+        <a>Middle Grade Novels </a><br>
+        <a>Rhyming Stories</a>
+        <a>Non-Rhyming Stories </a>
+        <a> Cookies Policy</a>
+        <a>Privacy Policy </a>
+        <a> User Agreement</a>
+    </p></div>
+    </footer>
+    
+</body>
+</html>
