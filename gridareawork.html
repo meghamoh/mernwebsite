@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            body {
+              margin: 0;
+              padding: 0;
+            }
+            .container {
+              display: grid;
+              grid-template-areas: "header header"
+              "sidebar content"
+              "footer footer";
+              grid-template-columns: 1fr 3fr;
+              grid-template-rows: auto 1fr auto;
+              gap: 10px;
+              height: 100vh;
+            }
+            .header {
+              grid-column: header;
+              background-color: #4CAF50;
+              color: white;
+              text-align: center;
+              padding: 20px;
+            }
+            .sidebar {
+              background-color: #7d7a7a;
+              padding: 15px;
+            }
+            .content {
+              background-color: #d994ba;
+              padding: 15px;
+            }
+            .footer {
+              grid-column: footer;
+              background-color: #305466;
+              text-align: center;
+              padding: 10px;
+            }
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">NEWS PAPER</div>
+        <div class="sidebar">
+            <h1>The Rising water</h1>
+            <p></p>
+        </div>
+        <div class="content">TEMPERATURES AND WEATHER PATTERNS</div>
+        <div class="footer">1</div>
+      </div>
+    
+</body>
+</html>

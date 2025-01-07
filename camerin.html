@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #140342;
+            padding: 10px 20px;
+        }
+        .logo{
+           
+            display: block;
+           margin-left: 150px;
+        }
+
+        .nav{
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+
+        }
+        .nav li{
+            margin:0 20px ;
+            position: relative;
+            line-height: 40px;
+        }
+        .nav a{
+            text-decoration: none;
+            color:white;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+        .nav a:hover{
+            color: #0FB298;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            padding: 10px 0;
+            list-style: none;
+            margin: 0;
+            width: 200px;
+            color: #2E3589;
+            z-index: 10;
+        }
+        .dropdown a {
+            color:#2E3589;
+            font-size: 16px;
+            padding: 10px ;
+            display: block;
+            border-bottom: 0.3px solid #2E3589;
+        }
+    
+        .dropdown a:hover {
+            color: #0FB298;
+        }
+        .nav li:hover .dropdown {
+            display: block; 
+        }
+        .drop {
+            display: inline-block;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+        .nav li:hover .drop {
+            transform: rotate(180deg); 
+        }
+        .menu{
+            display: none;
+            cursor: pointer;
+        }
+       
+        .mainimg{
+            display: block;
+            position: relative;
+            
+        }
+        .blue,.green{
+            position: absolute;
+            bottom: 200px;
+            left:5%;
+           top: 550px;
+           font-size: larger;
+           border: none;
+           
+        }
+        .blue{
+            background-color: #2E3589;
+            color: white;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 4px;
+            z-index: 1;
+
+        }
+        .green{
+            background-color: #0FB298;
+            color: white;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 5px;
+            margin-left: 200px;
+            z-index: 0;
+            
+        }
+        .blue:hover{
+            background-color: #0FB298;
+        }
+        .green:hover{
+            background-color: #2E3589;
+        }
+        
+        
+        .abt1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe{
+            padding: 100px;
+            width: 50%; 
+            border-radius: 10px;
+            padding: 0;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+        
+        .abt2{
+            width: 50%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            justify-content: center;
+            text-align:justify;
+            word-spacing: 5px;
+        }
+       
+        .blu{
+            position: absolute;
+            background-color: #2E3589;
+            color: white;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 4px;
+            border:3px solid #2E3589 ;
+            font-size: larger;
+
+        }
+        .whi{
+            position: absolute;
+            background-color: white;
+            color:#2E3589;
+            width: 250px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 4px; 
+            border: 3px solid #2E3589;
+            margin-left: 200px;
+            font-size: larger;
+        }
+        .blu:hover{
+            background-color: white;
+            color: #2E3589;
+        }
+        .whi:hover{
+            background-color:#2E3589;
+            color: white;
+        }
+        .readmore{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 100px;
+            text-align: justify;
+              
+        }
+        .h1{
+            text-align: center;
+        }
+        .read1{
+            width: 300px;
+            height: 350px;
+            border: 2px solid #2E3589;
+            padding: 50px ;
+            border-radius: 15px;
+            font-family: sans-serif;
+
+            
+        }
+        .read2{
+            width: 300px;
+            height: 350px;
+            border: 2px solid #2E3589;
+            padding:  50px;
+            border-radius: 15px;
+            font-family: sans-serif;
+            word-spacing: 5px;
+        }
+        .read3{
+            width: 300px;
+            height: 350px;
+            border: 2px solid #2E3589;
+            padding: 50px;
+            border-radius: 15px;
+            font-family: sans-serif;
+            word-spacing: 5px;
+        }
+        .b1{
+            position: absolute;
+            background-color: #2E3589;
+            color: white;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border:3px solid #2E3589 ;
+            font-size: larger; 
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            padding: 0;
+            margin-left:72px ;
+        }
+        .b1:hover{
+            background-color: white;
+            color: #0FB298;
+            border-color: #0FB298;
+        }
+       
+        .learn{
+            display:block;
+            width: 100%;
+            height: 650px;
+            background-color:#f4f4f4;
+            justify-content: center;
+            text-align: center;
+            
+
+        }
+        .h2{
+            color: #140342;
+            font-size: 50px;
+            padding-top: 100px;
+        }
+        .p1{
+            color: #2E3589;
+            font-size: 20px;
+            margin-top: 0;
+            line-height: 5px;
+
+        }
+        .unline{
+            width: 500px;
+            height: 5px;
+            background-image:linear-gradient(to right, #2E3589,#0FB298) ;
+            justify-content: center;
+            align-items: center;
+            margin-left: 500px;
+            border-radius: 10px;
+        }
+        .car{
+            width: 100%;
+            height: 200px;
+            justify-content:space-around;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 100px;
+           
+        }
+        
+        .cad1:hover {
+            box-shadow: 5px 5px 5px #2E3589;
+        
+        }
+        
+        .feature{
+            width: 100%;
+            height: 330px;
+            background-color: #2E3589;
+        }
+
+        
+        .h3{
+            color: white;
+            font-size: 30px;
+            padding-top: 40px;
+            margin-left: 150px;
+        
+         }   
+        .p3{
+            width: 300px;
+            color:white;
+            justify-content: center;
+            font-size: 18px;
+            margin-left: 150px;
+        }
+        .b2{
+           width: 150px;
+           height: 40px;
+           margin-left: 150px;
+           border-radius: 10px;
+           border: none;
+           background-color: #0FB298;
+           color: white;
+           font-weight: bold;
+
+        }
+        .b2:hover{
+            background-color: white;
+            color: #2E3589;
+        }
+        .h4{
+            color: #140342;
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 0;
+        
+
+        }
+        .p4{
+            color: #2E3589;
+            font-size: 20px;
+            justify-content: center;
+            text-align: center;
+            line-height: 0;
+
+        }
+        .joinus{
+            width: 100%;
+            height: 500px;
+            justify-content:space-around;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .c1{
+            font-size: x-large;
+            font-weight: bold;
+            color: #140342;
+
+        }
+        .p5{
+            font-size: 15px;
+            color: rgb(72, 77, 77);
+
+            }
+        .card1{
+            border: 3px solid #2E3589;
+            border-radius: 10px;
+            width:300px ;
+            height: 250px;
+            padding: 10px;
+
+        }
+        .card2{
+            border: 3px solid #2E3589;
+            border-radius: 10px;
+            width:300px ;
+            height: 250px;
+            padding: 10px;
+        }
+        .card3{
+            border: 3px solid #2E3589;
+            border-radius: 10px;
+            width:300px ;
+            height: 250px;
+            padding: 10px;
+        }
+        .card4{
+            border: 3px solid #2E3589;
+            border-radius: 10px;
+            width:300px ;
+            height: 250px;
+            padding: 10px;
+        }
+        .card1:hover{
+            border-color: #0FB298;
+            box-shadow:5px 5px 5px  #0FB298;
+
+        }
+        .card2:hover{
+            border-color: #0FB298;
+            box-shadow:5px 5px 5px  #0FB298;
+
+        }
+        .card3:hover{
+            border-color: #0FB298;
+            box-shadow:5px 5px 5px #0FB298;
+
+        }.card4:hover{
+            border-color: #0FB298;
+            box-shadow:5px 5px 5px  #0FB298;
+        }
+        .h5{
+            font-size: 50px;
+            color: #140342;
+            text-align: center;
+
+        }
+        .p6{
+            font-size: larger;
+            color: #2E3589;
+            text-align: center;
+
+        }
+        .grid1 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 10px;
+            background-color: white;
+            margin: 10px;
+            width: 85%;
+            height: auto;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+        .g1 {
+            background-color: lightblue;
+            height: 300px; 
+
+        }
+        .g1:hover{
+            background-color: #2E3589;
+            box-shadow:2px 2px 5px rgb(9, 9, 69);
+        }
+        .g1 img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; 
+        }
+        .b7{
+            width: 100px;
+            height: 30px;
+            background-color: #2E3589;
+            color: white;
+            justify-content: center;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            align-items: center;
+            
+
+        }
+        .b8{
+            width: 200px;
+            height: 30px;
+            background-color: rgb(255, 0, 85);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            
+           
+        }
+        .in{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            gap: 30px;
+            margin-left: 100px;
+        }
+        .b7:hover{
+            background-color: #0FB298;
+
+        }
+        .b8:hover{
+            background-color: orangered;
+
+        }
+        .chk {
+            background-color: #2E3589;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+        }
+        
+        .chk1 {
+            width: 50%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px; 
+            color: #fff; 
+        }
+        .h10{
+            font-size: x-large;
+            font-weight: bold;
+        }
+        .p9{
+            font-size: medium;
+        }
+        
+        .chk2 {
+            width: 50%; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            border-radius: 10px;
+        }
+        
+        .ch {
+            max-width: 100%; 
+            height: auto;
+        }
+        
+        .p10{
+            color: #0FB298;
+            font-size: large;
+        }
+        .pic1{
+            background-color: blue;
+            opacity: 0.4;
+            width: 100%;
+            height: auto;
+        }
+        
+        .sec{
+            position: relative;
+            width: 100%;
+            height: 800px;
+        }
+        
+        .picture {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .im {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .pic1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0.5); 
+            z-index: 2;
+        }
+        
+        .pic2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 3;
+        }
+        
+        .h11 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-shadow:2px 2px 2px #2E3589;
+        }
+        
+        .p11 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow:2px 2px 2px #2E3589;
+        }
+        
+        .b5 {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding:  20px;
+            font-size: 1rem;
+            text-shadow:2px 2px 2px #2E3589;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .b5:hover {
+            background-color:#2E3589;
+            color:white;
+            border: 2px solid #2E3589;
+
+        }
+        
+        
+        footer{
+            background-color: #140342;
+            color: white;
+            width: 100%;
+            height: 500px;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: row;
+           
+        }
+        .p7{
+            text-align: justify;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            line-height: 25px;
+        }
+
+        .f1{
+            display: flex;
+            flex-direction: row;
+            padding-left: 20px;
+        }
+        .d2{
+            text-align: justify;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            margin-left: 50px;
+
+        }
+        .d3{
+            text-align: justify;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+
+        }
+        .s1,.s2,.s3{
+            font-size: 25px;
+            text-decoration: underline solid 2px #0FB298;
+            line-height: 50px;
+            text-underline-offset: 15px;
+            
+        }
+        ul{
+            font-size: 18px;
+        }
+        
+        .f2{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            background-color: #140342;
+            color:white;
+        }
+        @media (max-width:600px){
+        
+            .navbar{
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+
+            }
+
+            .nav{
+                flex-direction: column;
+                width: 100%;
+                display: none;
+                
+            }
+            .nav li{
+                margin:  0;
+
+            }
+            .nav a{
+                font-size: 14px;
+            }
+            .menu{
+                display: block;
+                position:absolute ;
+                padding-top: 20px;
+                padding-left: 330px;
+                cursor: pointer;
+                
+            }
+            .logo{
+                margin:0 ;
+            }
+            .nav.active {
+                display: block;
+            }
+            .blue, .green {
+                font-size: medium;
+                width: 50px;
+                height: 20px;
+                bottom: 100px;
+                top: 170px;
+                font-size: 7px;
+                border-radius: 5px;
+                
+            }
+            .blue {
+                margin-left: 0;
+
+            }
+            .green {
+                margin-left: 70px;
+            }
+            .mainimg img {
+                width: 100%;
+            }
+            .abt1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            iframe{
+                padding: 100px;
+                width: 100%; 
+                border-radius: 10px;
+                padding: 0;
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-top: 100px;
+            }
+            
+            .abt2{
+                width: 100%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: medium;
+                justify-content: center;
+                text-align:justify;
+                word-spacing: 5px;
+            }
+           
+            .blu{
+                position: absolute;
+                background-color: #2E3589;
+                color: white;
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                margin-top: 4px;
+                border:3px solid #2E3589 ;
+                font-size: small;
+    
+            }
+            .whi{
+                position: absolute;
+                background-color: white;
+                color:#2E3589;
+                width: 150px;
+                height: 40px;
+                border-radius: 5px;
+                margin-top: 4px; 
+                border: 3px solid #2E3589;
+                margin-left: 150px;
+                font-size: small;
+            }
+            .blu:hover{
+                background-color: white;
+                color: #2E3589;
+            }
+            .whi:hover{
+                background-color:#2E3589;
+                color: white;
+            }
+            .readmore{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                margin: 100px;
+                text-align: justify;
+                  
+            }
+            .h1{
+                text-align: center;
+            }
+            .read1{
+                width: 300px;
+                height: 350px;
+                border: 2px solid #2E3589;
+                padding: 20px ;
+                border-radius: 15px;
+                font-family: sans-serif;
+                margin-top: 50px;
+    
+                
+            }
+            .read2{
+                width: 300px;
+                height: 350px;
+                border: 2px solid #2E3589;
+                padding:  20px;
+                border-radius: 15px;
+                font-family: sans-serif;
+                word-spacing: 5px;
+                margin-top: 50px;
+            }
+            .read3{
+                width: 300px;
+                height: 350px;
+                border: 2px solid #2E3589;
+                padding: 20px;
+                border-radius: 15px;
+                font-family: sans-serif;
+                word-spacing: 5px;
+                margin-top: 50px;
+            }
+            .b1{
+                position: absolute;
+                background-color: #2E3589;
+                color: white;
+                width: 100px;
+                height: 50px;
+                border-radius: 10px;
+                border:3px solid #2E3589 ;
+                font-size: small; 
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+                padding: 0;
+                margin-left:72px ;
+            }
+            .b1:hover{
+                background-color: white;
+                color: #0FB298;
+                border-color: #0FB298;
+            }
+            .learn{
+                display:block;
+                width: 100%;
+                height: 650px;
+                background-color:#f4f4f4;
+                justify-content: center;
+                text-align: center;
+                
+    
+            }
+            .h2{
+                color: #140342;
+                font-size: 30px;
+                padding-top: 100px;
+            }
+            .p1{
+                color: #2E3589;
+                font-size: 15px;
+                margin-top: 0;
+                line-height: 20px;
+    
+            }
+            .unline{
+                width: 500px;
+                height: 5px;
+                background-image:linear-gradient(to right, #2E3589,#0FB298) ;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                margin-left: 0px;
+                border-radius: 10px;
+            }
+            .car{
+                width: 100%;
+                height: 200px;
+                justify-content:space-around;
+                gap: 100px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 50px;
+               
+               
+            }
+            
+            .cad1:hover {
+                box-shadow: 5px 5px 5px #2E3589;
+            
+            }
+            .feature{
+                width: 100%;
+                height: 330px;
+                background-color: #2E3589;
+            }
+    
+            
+            .h3{
+                color: white;
+                font-size: 30px;
+                padding-top: 40px;
+                margin-left: 80px;
+            
+             }   
+            .p3{
+                width: 300px;
+                color:white;
+                justify-content: center;
+                font-size: 18px;
+                margin-left: 80px;
+            }
+            .b2{
+               width: 150px;
+               height: 40px;
+               margin-left: 150px;
+               border-radius: 10px;
+               border: none;
+               background-color: #0FB298;
+               color: white;
+               font-weight: bold;
+    
+            }
+            .b2:hover{
+                background-color: white;
+                color: #2E3589;
+            }
+            .h4{
+                color: #140342;
+                font-size: 30px;
+                font-weight: bold;
+                justify-content: center;
+                text-align: center;
+                padding-bottom: 0;
+            
+    
+            }
+            .p4{
+                color: #2E3589;
+                font-size: 15px;
+                justify-content: center;
+                text-align: center;
+                line-height: 0;
+    
+            }
+            .joinus{
+                width: 100%;
+                height: 1300px;
+                justify-content:space-around;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+            }
+            .c1{
+                font-size: x-large;
+                font-weight: bold;
+                color: #140342;
+    
+            }
+            .p5{
+                font-size: 15px;
+                color: rgb(72, 77, 77);
+    
+                }
+            .card1{
+                border: 3px solid #2E3589;
+                border-radius: 10px;
+                width:300px ;
+                height: 250px;
+                padding: 10px;
+    
+            }
+            .card2{
+                border: 3px solid #2E3589;
+                border-radius: 10px;
+                width:300px ;
+                height: 250px;
+                padding: 10px;
+            }
+            .card3{
+                border: 3px solid #2E3589;
+                border-radius: 10px;
+                width:300px ;
+                height: 250px;
+                padding: 10px;
+            }
+            .card4{
+                border: 3px solid #2E3589;
+                border-radius: 10px;
+                width:300px ;
+                height: 250px;
+                padding: 10px;
+            }
+            .card1:hover{
+                border-color: #0FB298;
+                box-shadow:5px 5px 5px  #0FB298;
+    
+            }
+            .card2:hover{
+                border-color: #0FB298;
+                box-shadow:5px 5px 5px  #0FB298;
+    
+            }
+            .card3:hover{
+                border-color: #0FB298;
+                box-shadow:5px 5px 5px #0FB298;
+    
+            }.card4:hover{
+                border-color: #0FB298;
+                box-shadow:5px 5px 5px  #0FB298;
+            }
+            .h5{
+                font-size: 30px;
+                color: #140342;
+                text-align: center;
+    
+            }
+            .p6{
+                font-size: medium;
+                color: #2E3589;
+                text-align: center;
+    
+            }
+            .grid1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 10px;
+                background-color: white;
+                margin: 10px;
+                width: 85%;
+                height: auto;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 100px;
+            }
+            .g1 {
+                background-color: lightblue;
+                height: 300px; 
+            }
+            .g1 img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover; 
+            }
+            .b7{
+                width: 100px;
+                height: 30px;
+                background-color: #2E3589;
+                color: white;
+                justify-content: center;
+                border: none;
+                border-radius: 5px;
+                text-align: center;
+                align-items: center;
+                
+    
+            }
+            .b8{
+                width: 200px;
+                height: 30px;
+                background-color: rgb(255, 0, 85);
+                color: white;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: none;
+                border-radius: 5px;
+                text-align: center;
+                
+               
+            }
+            .in{
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                gap: 30px;
+                margin-left: 100px;
+            }
+            .b7:hover{
+                background-color: #0FB298;
+    
+            }
+            .b8:hover{
+                background-color: orangered;
+    
+            }
+            .chk {
+                background-color: #2E3589;
+                width: 100%;
+                height: 500px;
+                display: flex;
+                flex-direction: row;
+                margin-top: 100px;
+               
+            }
+            
+            .chk1 {
+                width: 100%; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 50px; 
+                color: #fff; 
+            }
+            .h10{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .p9{
+                font-size: medium;
+            }
+            
+            .chk2 {
+                width: 100%; 
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                border-radius: 10px;
+                margin-right: 10px;
+            }
+            
+            .ch {
+                max-width: 100%; 
+                height: auto;
+            }
+            
+            .p10{
+                color: #0FB298;
+                font-size: large;
+            }
+            .pic1{
+                background-color: blue;
+                opacity: 0.4;
+                width: 100%;
+                height: auto;
+            }
+            .sec{
+                position: relative;
+                width: 100%;
+                height: 400px;
+            }
+            
+            .picture {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                overflow: hidden;
+            }
+            
+            .im {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            
+            .pic1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 255, 0.5); 
+                z-index: 2;
+            }
+            
+            .pic2 {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: white;
+                z-index: 3;
+            }
+            
+            .h11 {
+                font-size: 20px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                text-shadow:2px 2px 2px#2E3589;
+            }
+            
+            .p11 {
+                font-size: 15px;
+                margin-bottom: 20px;
+                text-shadow:2px 2px 2px #2E3589;
+            }
+            
+            .b5 {
+                background-color: transparent;
+                color: white;
+                border: 2px solid white;
+                border-radius: 10px;
+                padding:  20px;
+                font-size: small;
+                text-shadow:2px 2px 2px #2E3589;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+               
+            }
+            
+            .b5:hover {
+                background-color:#2E3589;
+                color:white;
+                border: 2px solid #2E3589;
+    
+            }
+            
+            
+            footer{
+                background-color: #140342;
+                color: white;
+                width: 100%;
+                height: auto;
+                padding-top: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+               
+            }
+            .p7{
+                text-align: justify;
+                display: block;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                line-height: 25px;
+            }
+    
+            .f1{
+                display: flex;
+                flex-direction: column;
+                padding-left: 20px;
+            }
+            .d2{
+                text-align: justify;
+                display: block;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                margin-left: 50px;
+    
+            }
+            .d3{
+                text-align: justify;
+                display: block;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+    
+            }
+            .s1,.s2,.s3{
+                font-size: 25px;
+                text-decoration: underline solid 2px #0FB298;
+                line-height: 50px;
+                text-underline-offset: 15px;
+                
+            }
+            ul{
+                font-size: 18px;
+            }
+            .f2{
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                background-color: #140342;
+                color:white;
+            }
+           
+        
+            
+        }
+
+    </style>
+
+</head>
+<body>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://camerinfolks.com/wp-content/uploads/2023/07/Camerin_folks-removebg-preview.png" alt="img" width="330px" height="70px">
+                     </div>
+                <ul class="nav">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About Us</a></li>
+                    <li><a href="#Courses">Courses</a>
+                        <div class="drop"><img src="./images/pngwing.com.png" alt="img" width="20px" height="20px" ></div>
+                        <ul class="dropdown">
+
+                            <li><a href="#WebDevelopment">Web Development</a></li>
+                            <li><a href="#DataScience">Data Science</a></li>
+                            <li><a href="#MachineLearning">Machine Learning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Internship">Internship</a></li>
+                    <li><a href="#Placement">Placement</a></li>
+                    <li><a href="#Testimonials">Testimonials</a></li>
+                    <li><a href="#Gallery">Gallery</a></li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#ContactUs">Contact Us</a></li>
+                </ul>
+                <div class="menu"><img src="./images/full-m2i8i8A0K9A0H7b1.png" alt="img" width="20px" height="20px" ></div>
+            </div>
+        </header>
+        <section>
+           <div class="mainimg">
+            <img src="./images/img1.png" alt="img" width="100%">
+            
+            <button class="blue" type="button" name="button" >Join Now</button>
+            <button class="green" type="button" name="button" >View Courses</button>
+        
+           </div> 
+        </section>
+        <section>
+        <div class="abt1"><iframe style="border:4px solid #2E3589 ;" width="628" height="354" src="https://www.youtube.com/embed/P2t9lz71-Eg" title="CAMERINFOLKS PVT LTD - Software Development &amp; Software Training Institute in kochi, kerala" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <div class="abt2"> <h1 style="font-size: xx-large; color:#140342">About Camerinfolks Institute</h1>
+        <p>Camerinfolks is a renowned tech training institute where you’ll uncover the tools to transform your passion into a promising career. With a wide range of specialty courses, we offer comprehensive training programs in trending technologies and digital marketing. <br>
+
+       Be it Python, Java, or machine learning, we have seasoned professionals to guide you. Take a step closer to your dreams with Camerinfolks.</p>
+       <button class="blu" type="button" name="button" >Read More</button>
+       <button class="whi" type="button" name="button" >Join Camerin Now</button>
+    </div>
+    </div>
+        </section>
+        <section>
+            <div class="readmore">
+                <div class="read1">
+                    <img src="https://camerinfolks.com/wp-content/uploads/2024/04/Camerin_innov.png" alt="img" width="300px" height="50px">
+                    <h1 class="h1" >Camerin Innovate</h1>
+                        <p> Camerin Innovate, a subsidiary of the Camerin Group and based in Carnival Infopark, specializes in providing healthcare information technology solutions and related services. The company offers a comprehensive range of solutions and services in this field.</p>
+                        <button class="b1" type="button" name="button" >Read More</button>
+                    </div>
+                <div class="read2">
+                    <img src="https://camerinfolks.com/wp-content/uploads/2024/04/Camerin_innov.png" alt="img" width="300px" height="50px">
+                    <h1 class="h1">Camerin Folks</h1>
+                    <p>Camerin Folks, a subsidiary of the Camerin Group, is an ISO (9001:2015) Certified leading edutech company headquartered in Cochin. It is recognized as the most innovative IT Training and Recruitment company. Camerin folks provides classroom and online training services across India and various other countries.</p>
+                    <button class="b1" type="button" name="button" >Read More</button>
+                </div>
+                <div class="read3">
+                    <img src="https://camerinfolks.com/wp-content/uploads/2024/04/Camerin_innov.png" alt="img"  width="300px" height="50px">
+                    <h1 class="h1">Camerin Spark</h1>
+                    <p>Camerin Spark, a subsidiary of the Camerin Group, specializes in edutech offerings focused on administrative courses. Recognized as a leader in innovative training and skill development, Camerin Spark delivers both classroom and online training services throughout India and various other countries.</p>
+                    <button class="b1" type="button" name="button" >Read More</button>
+                </div>
+            </div>
+        </section>
+        <section>
+        <div class="learn">
+            <h1 class="h2" >What will you learn From Us !</h1>
+            <p class="p1" >Our mission is to provide 100% placements to students those who enroll for our specialized courses.</p>
+            <div class="unline"><h1></h1></div>
+            <div class="car">
+                <div class="cad1"><img src="./images/Screenshot 2024-12-16 233042.png" alt="img" width="150px" height="150px" style="border-radius: 10px; "> </div>
+                <div class="cad1"><img src="./images/Screenshot 2024-12-16 233035.png" alt="img" width="150px" height="150px" style="border-radius: 10px; "> </div>
+                <div class="cad1"><img src="./images/Screenshot 2024-12-16 233026.png" alt="img" width="150px" height="150px" style="border-radius: 10px; "> </div>
+                <div class="cad1"><img src="./images/Screenshot 2024-12-16 233016.png" alt="img" width="150px" height="150px" style="border-radius: 10px; "> </div>
+                <div class="cad1"><img src="./images/Screenshot 2024-12-16 233003.png" alt="img" width="150px" height="150px" style="border-radius: 10px; "> </div>
+                <div class="cad1"><img src="./images/Screenshot 2024-12-16 232949.png" alt="img" width="150px" height="150px" style="border-radius: 10px; "> </div>
+            
+            </div>
+        </div>
+        </section>
+        <section>
+            <div class="feature">
+                <h1 class="h3" >Featured Courses</h1>
+                <p class="p3" >Hand-picked Instructor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
+                <button class="b2" type="button" name="button" >Browse All Course</button>
+            </div>
+            
+        </section>
+        <section>
+            <div class="join">
+                <h1 class="h4">Why you should join us ?</h1>
+                <p class="p4" >Choose Camerinfolks to fuel your ambitions.</p>
+                <div class="unline"><h1></h1></div>
+                </div>
+            <div class="joinus">
+                <div class="card1"><img src="https://camerinfolks.com/wp-content/uploads/2023/06/webinar.png" alt="img" width="" height=""> <h1 class="c1">Relevant Courses</h1>
+                    <p class="p5" >We provide diverse, up-to-date courses to match the current industry needs.</p></div>
+                <div class="card2"><img src="https://camerinfolks.com/wp-content/uploads/2023/06/classroom.png" alt="img" width="" height=""><h1 class="c1">Experienced Faculty</h1>
+                    <p class="p5">Learn from industry experts with years of experience in their respective fields.</p></div>
+                <div class="card3"><img src="https://camerinfolks.com/wp-content/uploads/2023/06/production.png" alt="img" width="" height=""><h1 class="c1">Practical Learning</h1>
+                    <p class="p5">We focus on hands-on learning to tackle real-world challenges.</p></div>
+                <div class="card4"><img src="https://camerinfolks.com/wp-content/uploads/2023/06/career-path.png" alt="img" width="" height=""><h1 class="c1">Career Support</h1>
+                    <p class="p5">We offer personalized guidance to land your dream job.</p></div>
+            </div>
+        </section>
+        <section>
+            <div class="insta">
+                <h1 class="h5" >Check Our Instagram Feed !</h1>
+                <p class="p6">Make sure you follow us on Instagram to get latest updates.</p>
+                <div class="unline"><h1></h1></div>
+            </div>
+        </section>
+        <section>
+            <div class="grid1">
+              <div class="g1"><img src="./images/g1.png" alt="img" width="100%" height="100%"> </div>  
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210722.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210813.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210743.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210755.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210853.png" alt="img" width="100%" height="100%"> </div> 
+                
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210824.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210840.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210902.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210922.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210935.png" alt="img" width="100%" height="100%"> </div> 
+                
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210912.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 211105.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 211048.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 211034.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 211021.png" alt="img" width="100%" height="100%"> </div> 
+                
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 211010.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210853.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 211105.png" alt="img" width="100%" height="100%"> </div> 
+              <div class="g1"><img src="./images/Screenshot 2024-12-15 210959.png" alt="img" width="100%" height="100%"> </div> 
+              
+              
+              
+              
+            </div>
+           
+        </section>
+        <section>
+            <div class="in">
+                <button class="b7" name="button">Load More</button>
+                <button class="b8" name="button"><img src="./images/—Pngtree—white instagram icon png instagram_3562066.png"   alt="icon" width="20px" height="20px"> Follow on Instagram</button>
+
+            </div>
+        </section>
+        <section>
+            <div class="chk">
+                <div class="chk1">
+                
+
+                <h1 class="h10" >Check what people say about</h1>
+                <p class="p9" >Kerala’s Fast Growing Software Institute <b class="p10" >CAMERINFOLKS</b></p> 
+                <h1 class="h10" >9/10</h1>
+                <p class="p9" >9/10 users reported better learning
+                    outcomes.</p>
+                <h1 class="h10" >85%</h1>
+                <p class="p9" >85% of students see their course through to completion</p>
+                </div>
+                <div class="chk2">
+                    <img  class="ch" src="./images/Screenshot 2024-12-17 001807.png" alt="img" width="" height="">
+
+                </div>
+            </div>
+        </section>
+        <section class="sec">
+            <div class="picture"> <img  class="im" src="https://media.istockphoto.com/id/804317216/photo/human-hands-using-laptop-for-working-his-business-at-home.jpg?s=612x612&w=0&k=20&c=g5P2G2N6QwUjpiZXq65u605rQl04GHgWG8GDX8v-Fas=" alt="img" width="100%" height="800px" >
+                <div class="pic1"></div>
+                <div class="pic2">
+                        <h1 class="h11" >Find the right learning path for you</h1>
+                        <p class="p11" >Match your goals to our programs, explore your options and map out your path to success.</p>
+                        <button class="b5" type="button" name="button" >Get Started Now</button>
+                </div>       
+            
+            </div>
+        </section>
+        <footer>
+            <div class="f1">
+                <div class="d1"><img src="https://camerinfolks.com/wp-content/uploads/2023/07/Camerin_folks-removebg-preview.png" alt="img" width="300px" height="60px">
+                <p class="p7" >Camerinfolks Pvt. Ltd. is the most innovative Software Training institute in Kochi, delivering offline and online training across India and other countries. Camerinfolks Pvt. Ltd. is another subsidiary of Camerin Group Pvt. Ltd. We offer a wide range of trending software courses and provide real-time live projects and hands-on practical sessions along with training.</p>
+                </div>
+                <div class="d2">
+                    <h1 class="s1">COURSES</h1>
+                    <ul>
+                        <li>Java Training</li>
+                        <li>Python Training</li>
+                        <li> Software Testing</li>
+                        <li>DS & ML Training</li>
+                        <li>React & Node JS Training</li>
+                        <li>Flutter Training</li>
+                        <li> Digital Marketing</li>
+                        <li> MERN Stack Training</li>
+                        <li>FAQs</li>
+                    </ul>
+
+                </div>
+                <div class="d3">
+                    <h1 class="s2">CAMERIN INNOVATE</h1>
+                    <ul>
+                        <li>+91 9037467978</li>
+                        <li>info@camerininnovate.com</li>
+                        <li>2nd Floor, Carnival Infopark Phase I, Infopark Campus, Kochi, Kakkanad, Kerala 682030</li>
+                        
+                    </ul>
+
+            
+                
+                    <h1 class="s3">CAMERINFOLKS PVT.LTD</h1>
+                    <ul>
+                        <li>+91 7736421092</li>
+                        <li>career@camerinfolks.com</li>
+                        <li>5th Floor, Issac and Geethas Image Centre, Seaport - Airport Rd, above Ajfan Dates & Nuts, Kochi, Kakkanad, Kerala - 682037</li>
+                        
+                    </ul>
+                </div>
+               
+
+        </footer>
+        
+        <section>
+            
+            <div class="f2"  >
+                
+                Terms & Conditions
+                Privacy Policy<br>
+                © 2024 Camerinfolks. All Right Reserved. Designed & Developed By Camerinfolks Pvt Ltd
+                </div>
+        </section>
+</body>
+</html>

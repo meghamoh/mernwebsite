@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+          }
+          
+          .background {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            position: relative;
+            background-color: black;
+          }
+          
+          .card {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+          }
+          
+          .red {
+            background-color: red;
+            animation-name: move-red;
+            animation-delay: 0s;
+          }
+          
+          .blue {
+            background-color: blue;
+            animation-name: move-blue;
+            animation-delay: 2s;
+          }
+          
+          .green {
+            background-color: green;
+            animation-name: move-green;
+            animation-delay: 4s;
+          }
+          
+         
+          @keyframes move-red {
+            from {
+              transform: translate(0, 0);
+            }
+            to {
+              transform: translate(100px, 100px);
+            }
+          }
+          
+          @keyframes move-blue {
+            from {
+              transform: translate(0, 0);
+            }
+            to {
+              transform: translate(150px, 150px);
+            }
+          }
+          
+          @keyframes move-green {
+            from {
+              transform: translate(0, 0);
+            }
+            to {
+              transform: translate(200px, 200px);
+            }
+          }
+      </style>
+</head>
+<body>
+    <div class="background">
+        <div class="card red" id="card1"></div>
+        <div class="card blue" id="card2"></div>
+        <div class="card green" id="card3"></div>
+      </div>
+</body>
+</html>

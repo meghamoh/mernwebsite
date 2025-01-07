@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            color: blueviolet;
+            background-color: rgb(128, 0, 96);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            animation: slide 1s linear infinite;
+        }
+       /*
+        @keyframes fadein{
+            from{
+                opacity:0 ;
+            }
+            t0{
+                opacity: 1;
+            }
+        }*/
+        @keyframes slide {
+
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(100%);
+            }
+        }
+      /*  @keyframes slide {
+
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(100%);
+            }
+          }*/
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

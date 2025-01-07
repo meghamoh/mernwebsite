@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let age = prompt("Enter your age:");
+if (age >= 18) {
+    console.log("You are old enough to drive.");
+} else {
+    console.log(`You are left with ${18 - age} years to drive.`);
+}
+
+let myAge = 25; // Example value
+let yourAge = prompt("Enter your age:");
+if (yourAge > myAge) {
+    console.log(`You are ${yourAge - myAge} years older than me.`);
+} else {
+    console.log(`I am ${myAge - yourAge} years older than you.`);
+}
+
+
+let a = 4, b = 3;
+if (a > b) {
+    console.log("a is greater than b");
+} else {
+    console.log("a is less than b");
+}
+
+
+console.log(a > b ? "a is greater than b" : "a is less than b");
+
+let number = prompt("Enter a number:");
+if (number % 2 === 0) {
+    console.log(`${number} is an even number`);
+} else {
+    console.log(`${number} is an odd number`);
+}
+
+
+
+        let score = prompt("Enter your score:");
+score = parseInt(score);
+
+if (score >= 80 && score <= 100) {
+  console.log("Grade: A");
+} else if (score >= 70 && score < 80) {
+  console.log("Grade: B");
+} else if (score >= 60 && score < 70) {
+  console.log("Grade: C");
+} else if (score >= 50 && score < 60) {
+  console.log("Grade: D");
+} else {
+  console.log("Grade: F");
+}
+
+
+let month = prompt("Enter a month:").toLowerCase();
+
+if (["september", "october", "november"].includes(month)) {
+  console.log("The season is Autumn.");
+} else if (["december", "january", "february"].includes(month)) {
+  console.log("The season is Winter.");
+} else if (["march", "april", "may"].includes(month)) {
+  console.log("The season is Spring.");
+} else if (["june", "july", "august"].includes(month)) {
+  console.log("The season is Summer.");
+} else {
+  console.log("Invalid month.");
+}
+
+let day = prompt("What is the day today?").toLowerCase();
+if (["saturday", "sunday"].includes(day)) {
+    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a weekend.`);
+} else {
+    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a working day.`);
+}
+
+
+
+let monthh = prompt("Enter a month:").toLowerCase();
+if (["january", "march", "may", "july", "august", "october", "december"].includes(monthh)) {
+    console.log(`${monthh.charAt(0).toUpperCase() + monthh.slice(1)} has 31 days.`);
+} else if (["april", "june", "september", "november"].includes(monthh)) {
+    console.log(`${monthh.charAt(0).toUpperCase() + monthh.slice(1)} has 30 days.`);
+} else if (monthh === "february") {
+    console.log("February has 28 days.");
+} else {
+    console.log("Invalid month.");
+}
+
+
+let year = prompt("Enter a year:");
+let mon = prompt("Enter a month:").toLowerCase();
+if (["january", "march", "may", "july", "august", "october", "december"].includes(mon)) {
+    console.log(`${mon.charAt(0).toUpperCase() + mon.slice(1)} has 31 days.`);
+} else if (["april", "june", "september", "november"].includes(mon)) {
+    console.log(`${mon.charAt(0).toUpperCase() + mon.slice(1)} has 30 days.`);
+} else if (mon=== "february") {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        console.log("February has 29 days.");
+    } else {
+        console.log("February has 28 days.");
+    }
+} else {
+    console.log("Invalid month.");
+}
+
+    </script>
+</body>
+</html>
